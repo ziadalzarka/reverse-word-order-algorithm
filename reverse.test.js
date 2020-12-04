@@ -1,23 +1,17 @@
-const { reverseString } = require("./reverse");
+const { reverseWordOrder } = require("./reverse");
 
-test("reverses string of 2 characters", () => {
-  expect(reverseString("az")).toBe("za");
+test("reverses odd number of words", () => {
+  expect(reverseWordOrder("Mary had a little lamb")).toBe(
+    "lamb little a had Mary"
+  );
 });
 
-test("reverses string of 3 characters", () => {
-  expect(reverseString("abc")).toBe("cba");
+test("reverses even number of words", () => {
+  expect(reverseWordOrder("Mary had a little")).toBe("little a had Mary");
 });
 
-test("reverses string with spaces", () => {
-  expect(reverseString(" a  z ")).toBe(" z  a ");
-});
-
-test("reverses complex string", () => {
-  expect(reverseString(" a  z 431a ")).toBe(" a134 z  a ");
-});
-
-test("reverses 'Mary had a little lamb.'", () => {
-  expect(reverseString("Mary had a little lamb.")).toBe(
-    ".bmal elttil a dah yraM"
+test("reverses words without truncating spaces", () => {
+  expect(reverseWordOrder("Mary  had   a  little")).toBe(
+    "little  a   had  Mary"
   );
 });
