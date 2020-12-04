@@ -15,3 +15,9 @@ test("reverses string with spaces", () => {
 test("reverses complex string", () => {
   expect(reverseString(" a  z 431a ")).toBe(" a134 z  a ");
 });
+
+test("reverses 'Mary had a little lamb.'", () => {
+  expect(reverseString("Mary had a little lamb.")).toBe(
+    ".bmal elttil a dah yraM"
+  );
+});
