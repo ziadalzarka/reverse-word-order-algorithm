@@ -1,3 +1,3 @@
-# Reverse String Algorithm with Unit Testing
+# Reverse Word Order Algorithm with Unit Testing
 
-This is a repository that contains an algorithm that reverses strings and include unit tests for it.
+This is a repository that contains an algorithm that reverses word order strings and include unit tests for it.
